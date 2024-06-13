@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning to Type English</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Learning to Type English</h1>
+        <div id="start-screen">
+            <label for="name-input">Input Name:</label>
+            <input type="text" id="name-input" placeholder="Your name">
+            <select id="language-select">
+                <option value="english">English</option>
+                <option value="indonesian">Indonesian</option>
+            </select>
+            <button onclick="startTest()">Start</button>
+        </div>
+        <div id="typing-test" style="display: none;">
+            <div id="text-display"></div>
+            <textarea id="text-input" placeholder="Start typing..."></textarea>
+            <div id="feedback"></div>
+            <div id="stats">
+                <p id="wpm">WPM: 0</p>
+                <p id="accuracy">Accuracy: 0%</p>
+                <p id="time">Time: 60s</p>
+            </div>
+            <button onclick="nextText()">Next</button>
+            <button onclick="restart()">Restart</button>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>Final Result</h2>
+            <p id="final-wpm"></p>
+            <p id="final-accuracy"></p>
+            <button onclick="restart()">Try Again</button>
+        </div>
+    </div>
+    <audio autoplay loop>
+        <source src="backsound.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
